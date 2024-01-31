@@ -1,0 +1,71 @@
+﻿<nav>
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <img alt="Logo" src="images/logo.png" />
+            </div>
+            <div class="column">
+                <address>
+                    <abbr>Pampanga</abbr>
+                    <abbr>Philippines</abbr>
+                </address>
+            </div>
+            <div class="column">
+                <p>Facebook Group Link</p>
+            </div>
+            <div class="column">
+                <div class="field has-addons">
+                    <div class="control" style="@(ShowSearchBox ? "visibility: visible;": "visibility: hidden;")">
+                        <input type="text" class="input" placeholder="search term..." />
+                    </div>
+                    <div class="control">
+                        <button type="button" class="button" @onclick="() => ShowSearchBox = !ShowSearchBox">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <ul>
+                    <li>
+                        <NavLink Match="NavLinkMatch.All" href="">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span>Home</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink Match="NavLinkMatch.All" href="blog">
+                            <span class="icon"><i class="fas fa-blog"></i></span>
+                            <span>Blog</span>
+                        </NavLink>
+
+                    </li>
+                    <li>
+                        <NavLink Match="NavLinkMatch.All" href="about-us">
+                            <span class="icon"><i class="far fa-address-card"></i></span>
+                            <span>Abous Us</span>
+                        </NavLink>
+
+                    </li>
+                    <li>
+                        <NavLink Match="NavLinkMatch.All" href="contact">
+                            <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                            <span>Contact</span>
+                        </NavLink>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+@code {
+    bool ShowSearchBox;
+
+
+}

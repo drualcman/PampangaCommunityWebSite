@@ -1,0 +1,35 @@
+﻿nav {
+    background-color: #333;
+    padding: 2em 0 1em;
+    color: white;
+}
+
+ul, li {
+    list-style: none;
+}
+
+    ul, ::deep li a {
+        display: flex;
+        color: white;
+    }
+
+ul li {
+    flex-grow: 1;
+}
+
+::deep li a {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+    ::deep li a:hover,
+    ::deep li a.active {
+        color: #FF008C
+    }
+
+.button {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
