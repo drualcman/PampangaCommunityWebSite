@@ -3,6 +3,9 @@
     padding: 2em 0 1em;
     color: white;
 }
+a {
+    color: #FF008C
+}
 
 ul, li {
     list-style: none;
@@ -33,3 +36,6 @@ ul li {
     color: white;
     border: none;
 }
+    .button:focus:not(:active){
+        box-shadow: none;
+    }
