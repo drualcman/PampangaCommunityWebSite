@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampangaCommunityWebSite.Api", "PampangaCommunityWebSite\PampangaCommunityWebSite.Api\PampangaCommunityWebSite.Api.csproj", "{D4705EE1-B023-4002-84D9-2AD816EA8C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampangaCommunityWebSite.Api", "PampangaCommunityWebSite\PampangaCommunityWebSite.Api\PampangaCommunityWebSite.Api.csproj", "{D4705EE1-B023-4002-84D9-2AD816EA8C68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampangaCommunityWebSite.Client", "PampangaCommunityWebSite\PampangaCommunityWebSite.Client\PampangaCommunityWebSite.Client.csproj", "{55CDAE10-0FE8-40CD-B82A-4FD1B41A9B9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampangaCommunityWebSite.Client", "PampangaCommunityWebSite\PampangaCommunityWebSite.Client\PampangaCommunityWebSite.Client.csproj", "{55CDAE10-0FE8-40CD-B82A-4FD1B41A9B9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

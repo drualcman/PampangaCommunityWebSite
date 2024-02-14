@@ -1,0 +1,28 @@
+﻿@using PampangaCommunityWebSite.Client.Models
+<section class="hero is-large is-success">
+    <div class="hero-body">
+        <ul>
+            @foreach (SlideItem slide in Slides)
+            {
+                if (slide.IsVisible == true)
+                {
+                    <li>
+                        <h2 class="title">
+                            @slide.Title
+                        </h2>
+                        <p class="subtitle">@slide.SubTitle</p>
+                    </li>
+                }
+            }
+        </ul>
+        <ul>
+            @for (int i = 0; i < TotalSlides; i++)
+            {
+                <li>
+                    <span class="button">@(i + 1)</span>
+                </li>
+            }
+        </ul>
+    </div>
+</section>
+
