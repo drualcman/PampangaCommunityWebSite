@@ -15,11 +15,12 @@
                 }
             }
         </ul>
-        <ul>
+        <ul class="bullets">
             @for (int i = 0; i < TotalSlides; i++)
             {
-                <li>
-                    <span class="button">@(i + 1)</span>
+                int selectIndex = i;
+                <li @onclick="() => StopAnimation(selectIndex)">
+                    <span class="button is-rounded @(selectIndex == ActualSlide ? "is-active":"")"></span>
                 </li>
             }
         </ul>

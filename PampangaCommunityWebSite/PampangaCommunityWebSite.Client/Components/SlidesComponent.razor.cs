@@ -7,6 +7,7 @@ public partial class SlidesComponent
 
     int TotalSlides;
     int ActualSlide = 0;
+    bool IsStopAnimation = false;
 
     protected override void OnInitialized()
     {
@@ -14,8 +15,8 @@ public partial class SlidesComponent
         {
             Slides.Add(new SlideItem
             {
-                Title = $"Slide {i + 1}",
-                SubTitle = $"Subtitle {i + 1}"
+                Title = $"HELP A CHILD WITHOUT FAMILY {i + 1}",
+                SubTitle = $"AENEAN MAXIMUS IN SEM. {i + 1}"
             });
         }
         Slides[0].IsVisible = true;
@@ -33,16 +34,31 @@ public partial class SlidesComponent
 
     async Task StartSpool()
     {
-        await Console.Out.WriteLineAsync($"StartSpool {ActualSlide}");
-        Slides.ForEach(s=> s.IsVisible = false);
-        ActualSlide++;
-        if (ActualSlide >= TotalSlides)
-            ActualSlide = 0;
-        Slides[ActualSlide].IsVisible = true;
-        await InvokeAsync(StateHasChanged);
-        await Task.Delay(1500);        
-        await StartSpool();
+        if (!IsStopAnimation)
+        {
+            Slides.ForEach(s => s.IsVisible = false);
+            ActualSlide++;
+            if (ActualSlide >= TotalSlides)
+                ActualSlide = 0;
+            Slides[ActualSlide].IsVisible = true;
+            await InvokeAsync(StateHasChanged);
+            await Task.Delay(1500);
+            await StartSpool();
+        }
     }
 
+    void StopAnimation(int index)
+    {
+        IsStopAnimation = true;
+        Slides.ForEach(s => s.IsVisible = false);
+        Slides[index].IsVisible = true;
+        ActualSlide = index;
+        Task.Run(async () => 
+        {
+            await Task.Delay(5000);
+            IsStopAnimation = false;
+            await StartSpool();
+        });
+    }
 
 }
