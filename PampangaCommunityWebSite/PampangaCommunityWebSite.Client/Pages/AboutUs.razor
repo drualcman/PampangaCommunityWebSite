@@ -1,0 +1,15 @@
+﻿@page "/about-us"
+
+<section class="container">
+    <h1 class="title">Our Members</h1>
+    <div class="columns">
+        @foreach (var profile in MemberProfiles)
+        {
+            <MemberCardComponent Member=profile />
+        }
+    </div>
+</section>
+
+
+
+
