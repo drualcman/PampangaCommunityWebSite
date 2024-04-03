@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Hosting.Server.Features;
+using PampangaCommunityWebSite.Client.Entities;
 using PampangaCommunityWebSite.Client.Models;
 using PampangaCommunityWebSite.Client.ViewModels;
+using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
@@ -25,6 +27,13 @@ app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 app.MapRazorPages();
+
+app.MapPost("/send-contact-message", async (ContactFormData data) => 
+{
+    Debug.WriteLine($"Receive a contact from {data.Email}");
+    await Task.Delay(3000);
+    return Results.Ok();
+});
 
 app.MapFallbackToPage("/_Host");
 

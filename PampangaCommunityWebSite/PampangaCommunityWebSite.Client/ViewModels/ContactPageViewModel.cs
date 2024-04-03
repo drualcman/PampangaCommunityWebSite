@@ -8,9 +8,12 @@ public class ContactPageViewModel(ContactPageModel Model)
 	public ContactFormData FormData { get; set; } = new();
 
     public string Message { get; set; }
+    public bool IsSending { get; set; }
 
     public async Task SendForm()
     {
+		IsSending = true;
+		Message = string.Empty;
 		try
 		{
 			await Model.SendFrom(FormData);
@@ -20,6 +23,10 @@ public class ContactPageViewModel(ContactPageModel Model)
 		catch (Exception ex)
 		{
 			Message = $"Huston!. We got a problem! {ex.Message}";
+		}
+		finally
+		{
+			IsSending = false;
 		}
     }
 }
