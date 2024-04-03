@@ -1,4 +1,4 @@
-using PampangaCommunityWebSite.Client.Models;
+using PampangaCommunityWebSite.Client.Entities;
 
 namespace PampangaCommunityWebSite.Client.Components;
 public partial class SlidesComponent

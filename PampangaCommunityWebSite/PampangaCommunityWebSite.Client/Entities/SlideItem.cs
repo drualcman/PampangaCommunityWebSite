@@ -1,4 +1,4 @@
-﻿namespace PampangaCommunityWebSite.Client.Models;
+﻿namespace PampangaCommunityWebSite.Client.Entities;
 public class SlideItem
 {
     public string Title { get; set; }

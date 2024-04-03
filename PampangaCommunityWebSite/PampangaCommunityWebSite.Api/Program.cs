@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Hosting.Server.Features;
+using PampangaCommunityWebSite.Client.Models;
+using PampangaCommunityWebSite.Client.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
@@ -10,6 +12,8 @@ builder.Services.AddSingleton<HttpClient>(sp =>
     string baseAddress = addressFeatures.Addresses.First();
     return new HttpClient() { BaseAddress = new Uri(baseAddress) };
 });
+builder.Services.AddScoped<ContactPageModel>();
+builder.Services.AddScoped<ContactPageViewModel>();
 // Add services to the container.
 
 var app = builder.Build();

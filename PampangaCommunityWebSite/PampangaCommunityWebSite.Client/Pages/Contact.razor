@@ -14,12 +14,15 @@
             <h2 class="title">Contact Us</h2>
             <div class="columns">
                 <div class="column">
-                    <form>
+                    <EditForm Model="ViewModel.FormData" OnValidSubmit="ViewModel.SendForm" >
+                        <DataAnnotationsValidator />
+
                         <div class="field is-horizontal">
                             <div class="field-body">
                                 <div class="field">
                                     <p class="control is-expanded has-icons-left">
-                                        <input class="input" type="text" placeholder="Name">
+                                        <input class="input" type="text" placeholder="Name"
+                                            @bind=ViewModel.FormData.Name />
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-user"></i>
                                         </span>
@@ -27,15 +30,18 @@
                                 </div>
                                 <div class="field">
                                     <p class="control is-expanded has-icons-left has-icons-right">
-                                        <input class="input" type="email" placeholder="Email" value="alex@smith.com">
+                                        <InputText class="input" type="email" placeholder="alex@smith.com"
+                                            @bind-Value=ViewModel.FormData.Email/>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-envelope"></i>
                                         </span>
                                     </p>
+                                    <ValidationMessage For="() => ViewModel.FormData.Email" class="help is-danger" />
                                 </div>
                                 <div class="field">
                                     <p class="control is-expanded has-icons-left has-icons-right">
-                                        <input class="input" type="number" placeholder="Phone" value="091234567890">
+                                        <input class="input" type="text" placeholder="091234567890"
+                                            @bind=ViewModel.FormData.Phone>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-phone"></i>
                                         </span>
@@ -48,8 +54,10 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
-                                        <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                                        <InputTextArea class="textarea" placeholder="Explain how we can help you"
+                                            @bind-Value=ViewModel.FormData.Message />
                                     </div>
+                                    <ValidationMessage For="() => ViewModel.FormData.Message" class="help is-danger" />
                                 </div>
                             </div>
                         </div>
@@ -65,7 +73,10 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </EditForm>
+                    <label>
+                       @ViewModel.Message
+                    </label>
                 </div>
                 <div class="column">
                     <p>
@@ -83,6 +94,4 @@
     </div>
 </section>
 
-@code {
 
-}
