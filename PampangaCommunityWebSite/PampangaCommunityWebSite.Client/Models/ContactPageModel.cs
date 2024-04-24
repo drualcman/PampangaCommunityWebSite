@@ -1,4 +1,4 @@
-﻿using PampangaCommunityWebSite.Client.Entities;
+﻿using PampangaCommunityWebSire.Entities.Models;
 using System.Net.Http.Json;
 
 namespace PampangaCommunityWebSite.Client.Models;

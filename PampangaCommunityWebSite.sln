@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampangaCommunityWebSite.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampangaCommunityWebSite.Client", "PampangaCommunityWebSite\PampangaCommunityWebSite.Client\PampangaCommunityWebSite.Client.csproj", "{55CDAE10-0FE8-40CD-B82A-4FD1B41A9B9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampangaCommunityWebSire.Entities", "PampangaCommunityWebSire.Entities\PampangaCommunityWebSire.Entities.csproj", "{757A1ECF-8D90-4373-A48C-A3987323549C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampangaCommunityWebSite.BusinessLogic", "PampangaCommunityWebSite.BusinessLogic\PampangaCommunityWebSite.BusinessLogic.csproj", "{1CF2440C-9761-4CFC-8645-0F8BBEBE9F40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{55CDAE10-0FE8-40CD-B82A-4FD1B41A9B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55CDAE10-0FE8-40CD-B82A-4FD1B41A9B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55CDAE10-0FE8-40CD-B82A-4FD1B41A9B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757A1ECF-8D90-4373-A48C-A3987323549C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757A1ECF-8D90-4373-A48C-A3987323549C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757A1ECF-8D90-4373-A48C-A3987323549C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757A1ECF-8D90-4373-A48C-A3987323549C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF2440C-9761-4CFC-8645-0F8BBEBE9F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF2440C-9761-4CFC-8645-0F8BBEBE9F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF2440C-9761-4CFC-8645-0F8BBEBE9F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF2440C-9761-4CFC-8645-0F8BBEBE9F40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,6 +11,7 @@
 	</ItemGroup>
 	
   <ItemGroup>
+    <ProjectReference Include="..\..\PampangaCommunityWebSite.BusinessLogic\PampangaCommunityWebSite.BusinessLogic.csproj" />
     <ProjectReference Include="..\PampangaCommunityWebSite.Client\PampangaCommunityWebSite.Client.csproj" />
   </ItemGroup>
 

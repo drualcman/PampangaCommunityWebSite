@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Hosting.Server.Features;
-using PampangaCommunityWebSite.Client.Entities;
+using PampangaCommunityWebSire.Entities.Models;
+using PampangaCommunityWebSite.BusinessLogic.Interfaces.SendContactMessage;
 using PampangaCommunityWebSite.Client.Models;
 using PampangaCommunityWebSite.Client.ViewModels;
 using System.Diagnostics;
@@ -16,6 +17,7 @@ builder.Services.AddSingleton<HttpClient>(sp =>
 });
 builder.Services.AddScoped<ContactPageModel>();
 builder.Services.AddScoped<ContactPageViewModel>();
+builder.Services.AddUseCases();
 // Add services to the container.
 
 var app = builder.Build();
@@ -28,12 +30,8 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 app.MapRazorPages();
 
-app.MapPost("/send-contact-message", async (ContactFormData data) => 
-{
-    Debug.WriteLine($"Receive a contact from {data.Email}");
-    await Task.Delay(3000);
-    return Results.Ok();
-});
+app.MapPost("/send-contact-message", async (ContactFormData data,
+    ISendContactMessageController controller) => await controller.SendMessage(data));
 
 app.MapFallbackToPage("/_Host");
 

@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PampangaCommunityWebSite.Client.Entities;
+namespace PampangaCommunityWebSire.Entities.Models;
 
 public class ContactFormData
 {
     public string Name { get; set; }
     [Required]
+    [EmailAddress]
     public string Email { get; set; }
     public string Phone { get; set; }
     [Required]
