@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
-using PampangaCommunityWebSire.Entities.Models;
+using PampangaCommunityWebSite.Entities.Models;
 
 namespace PampangaCommunityWebSite.BusinessLogic.Interfaces.SendContactMessage;
 public interface ISendContactMessageController

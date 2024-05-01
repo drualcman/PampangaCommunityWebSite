@@ -1,5 +1,5 @@
-﻿using PampangaCommunityWebSire.Entities.Models;
-using PampangaCommunityWebSite.Client.Models;
+﻿using PampangaCommunityWebSite.Client.Models;
+using PampangaCommunityWebSite.Entities.Models;
 
 namespace PampangaCommunityWebSite.Client.ViewModels;
 

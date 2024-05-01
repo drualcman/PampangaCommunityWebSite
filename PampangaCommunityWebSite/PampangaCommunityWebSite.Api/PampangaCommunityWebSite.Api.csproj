@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>44c0f2f5-dba2-4adf-ba6d-398ad91e89e4</UserSecretsId>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -12,6 +13,7 @@
 	
   <ItemGroup>
     <ProjectReference Include="..\..\PampangaCommunityWebSite.BusinessLogic\PampangaCommunityWebSite.BusinessLogic.csproj" />
+    <ProjectReference Include="..\..\PampangaCommunityWebsite.MailService.Smtp\PampangaCommunityWebsite.MailService.Smtp.csproj" />
     <ProjectReference Include="..\PampangaCommunityWebSite.Client\PampangaCommunityWebSite.Client.csproj" />
   </ItemGroup>
 

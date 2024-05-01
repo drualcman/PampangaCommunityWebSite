@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PampangaCommunityWebSire.Entities.Models;
+namespace PampangaCommunityWebSite.Entities.Models;
 
 public class ContactFormData
 {
